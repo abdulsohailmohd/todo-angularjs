@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Table</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="main-ctrl" id="body">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 center-block">
+                <div class="card card-body">
+                    <div class="input-header input-group">
+                        <input type="text" class="form-control" ng-model="item">
+                        <a class="btn btn-primary input-group-addon" ng-click="addItem()">Add</a>
+                    </div>
+                    <div class="todo-list">
+                        <h4>Todo</h4>
+                        <ul>
+                            <p class="text-danger" ng-if="incomplete_list.length == 0"><small>Empty list</small></p>
+
+                            <li ng-repeat="x in incomplete_list">
+                                <div class="item">{{x}}</div>
+                                <div class="remove">
+                                    <input type="checkbox" class="" ng-click="completed($index)">
+                                    <label></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="completed-list">
+                        <h4>Completed</h4>
+
+                        <ul>
+                            <p class="text-danger" ng-if="complete_list.length == 0"><small>Empty list</small></p>
+                            <li ng-repeat="x in complete_list">
+                                <div class="item">{{x}}</div>
+                                <div class="remove">
+                                    <input type="checkbox" class="" ng-click="incomplete($index)" checked>
+                                    <label></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="js/main-ctrl.js"></script>
+</body>
+
+</html>

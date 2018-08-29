@@ -1,0 +1,76 @@
+// Mixins
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.center-block{
+    float: none;
+    margin-top: 50px;
+}
+.input-header {
+  padding: 10px 20px 0 20px;
+}
+
+.todo-list {
+  padding: 10px 20px 0 20px;
+}
+.completed-list {
+  padding: 10px 20px 0 20px;
+}
+.todo-list,
+.completed-list {
+  transition: all 0.5s;
+  margin-top: 10px;
+  h4{
+      text-transform: uppercase;
+  }
+  ul {
+    list-style: none;
+    padding: 10px;
+    border-top: 2px solid rgb(53, 78, 187);
+    padding-left: 0;
+    padding-right: 0;
+
+    li {
+      @include clearfix;
+      margin-top: 5px;
+      padding: 10px 15px;
+      border-radius: 100px;
+      background-color: rgb(195, 204, 231);
+      .item {
+        float: left;
+      }
+      .remove {
+        float: right;
+
+        label{
+            margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// Components
+.card {
+  box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.205);
+}
+.card-body {
+  padding: 10px;
+}
+
+.checkbox-control {
+  visibility: hidden;
+
+  + label:after {
+    content: url(../img/baseline-check_circle_outline-24px.svg);
+    color: #fff;
+  }
+  &:checked + label:after {
+    content: url(../img/baseline-check_circle-24px.svg);
+  }
+}

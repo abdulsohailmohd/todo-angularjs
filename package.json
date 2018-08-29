@@ -1,0 +1,22 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "AngularJS app Todo list",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulsohailmohd/todo-angularjs.git"
+  },
+  "author": "Sohail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulsohailmohd/todo-angularjs/issues"
+  },
+  "homepage": "https://github.com/abdulsohailmohd/todo-angularjs#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

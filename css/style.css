@@ -1,0 +1,61 @@
+.center-block {
+  float: none;
+  margin-top: 50px; }
+
+.input-header {
+  padding: 10px 20px 0 20px; }
+
+.todo-list {
+  padding: 10px 20px 0 20px; }
+
+.completed-list {
+  padding: 10px 20px 0 20px; }
+
+.todo-list,
+.completed-list {
+  transition: all 0.5s;
+  margin-top: 10px; }
+  .todo-list h4,
+  .completed-list h4 {
+    text-transform: uppercase; }
+  .todo-list ul,
+  .completed-list ul {
+    list-style: none;
+    padding: 10px;
+    border-top: 2px solid #354ebb;
+    padding-left: 0;
+    padding-right: 0; }
+    .todo-list ul li,
+    .completed-list ul li {
+      margin-top: 5px;
+      padding: 10px 15px;
+      border-radius: 100px;
+      background-color: #c3cce7; }
+      .todo-list ul li::after,
+      .completed-list ul li::after {
+        content: "";
+        clear: both;
+        display: table; }
+      .todo-list ul li .item,
+      .completed-list ul li .item {
+        float: left; }
+      .todo-list ul li .remove,
+      .completed-list ul li .remove {
+        float: right; }
+        .todo-list ul li .remove label,
+        .completed-list ul li .remove label {
+          margin: 0; }
+
+.card {
+  box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.205); }
+
+.card-body {
+  padding: 10px; }
+
+.checkbox-control {
+  visibility: hidden; }
+  .checkbox-control + label:after {
+    content: url(../img/baseline-check_circle_outline-24px.svg);
+    color: #fff; }
+  .checkbox-control:checked + label:after {
+    content: url(../img/baseline-check_circle-24px.svg); }
